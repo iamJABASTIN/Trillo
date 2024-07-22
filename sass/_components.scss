@@ -34,7 +34,7 @@
         margin-right: -3.25rem;
 
         &:focus {
-          width: 100%;
+          width: 95%;
           background-color: var(--color-Grey-light-3);  
           outline: none;
         }
@@ -385,6 +385,11 @@
     display: flex;
     flex-wrap: wrap;
 
+    @media only screen and (max-width:$bp-smallest) {
+        padding: 2rem 0;
+        margin: 2rem 0;
+    }
+
     &__item {
         flex:0 0 50%;
         margin-bottom: .7rem;
@@ -396,6 +401,10 @@
         height: 1rem;
         width: 1rem;
         margin-right: .7rem;
+        
+        @media only screen and (max-width:$bp-smallest) {
+            margin-right: .4rem;
+        }
         
         @supports (mask-image: url()) and (-webkit-mask-image: url()) { 
         background-color: var(--color-Primary);
